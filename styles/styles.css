@@ -1,0 +1,264 @@
+* {
+	box-sizing:border-box;	
+}
+
+html {
+	height:100dvh;	
+}
+
+header{
+	width: 100%;
+    position: fixed;
+    z-index: 9;
+	background-color: rgb(255, 255, 255);
+	top: 0;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid black;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	font-size: 16px;
+
+}
+
+nav ul {
+		display: flex;
+		justify-content: right;
+	}
+
+
+nav  ul li{
+
+	list-style: none;
+
+}
+
+nav ul li a {
+
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	width: 40px;
+	margin-right: 10px;
+}
+
+/* styling voor de tickets button*/
+
+.tickets-button {
+	background-color: #ff0;
+	padding: 10px;
+	border: 2px solid black;
+	font-weight: bold;
+}
+
+.tickets-button a {
+	
+	text-decoration: none;
+	color:black;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif, sans-serif;
+	min-height: 190%;
+	margin: 0vw;
+	padding: 0vw;
+	background-color:#ffffff;
+	display:grid;
+	position: relative;	
+}
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.search-container {
+    position: relative;
+    /* display: flex;
+    justify-content: center; */
+    background: linear-gradient(90deg, #d9d5d5, #e5e5e5);
+    border-radius: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 1, 0.1);
+    width: 700px;
+    height: 60px;
+    padding: 20px 20px;
+}
+
+footer {
+
+	display: flex;
+	justify-content: center;
+	background
+
+}
+
+#searchInput {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #040202;
+}
+
+.search-icon svg {
+    fill: #000000;
+    width: 30px;
+    height: 30px;
+}
+
+
+/*de snap-container*/
+main {
+	position:relative;
+	
+	background-color:rgb(255, 255, 255);
+	
+	overflow:auto;
+	scroll-snap-type:both mandatory;
+	overscroll-behavior:contain;
+
+
+
+/*de lijst*/
+ul {	
+	margin:0;
+	padding:1em;
+	list-style:none;
+	position:absolute;
+	width:700em;
+
+	background-color:#fff;
+
+	columns:47;
+}
+
+
+
+/*een foto//
+//*de foto's snappen binnen de scroll-container*/
+li {
+	--aspect-ratio:1;
+	
+	margin-bottom:1em;
+	aspect-ratio:var(--aspect-ratio);
+	overflow:hidden;
+	
+	//*alle li's snappen in het midden van de ul*/
+
+	scroll-snap-align:center;
+	background-size:cover;
+	background-position:center;
+}
+
+/*maar alle li's behalve de li met de class hier-starten
+// sanppen wel pas na .5s*/
+li:not(.hier-starten) {
+	/*om te beginnen snappen de li's niet*/
+	@starting-style {
+		scroll-snap-align:none;
+	}
+	
+	/* na de transitie is de starting-style niet meer van toepassing
+	transition-property:scroll-snap-align;
+	transition-delay:.5s;*/
+
+	/*om te zorgen dat scroll-snap-align kan animeren van none naar center;
+	transition-behavior: allow-discrete;*/
+	
+	//*en als @starting-style niet werkt
+	// dan start je gewoon links boven */
+}
+
+
+/*om hier-starten een beetje te highlighten*/
+li.hier-starten {
+	display:grid;
+	place-content:center;
+	place-items:center;
+	
+	border-radius:20em;
+}
+
+li.hier-starten div {
+	background-color:rgb(255, 255, 255);
+	
+	padding:.19em 1em;
+	text-align:center;
+	font-weight:bold;
+}
+
+
+
+/* andere verhoudingen */
+li:nth-of-type(2n) {
+	--aspect-ratio:1.3;
+}
+
+li:nth-of-type(3n) {
+	--aspect-ratio:1.6;
+}
+
+li:nth-of-type(5n) {
+	--aspect-ratio:1.9;
+}
+
+li:nth-of-type(7n) {
+	--aspect-ratio:.8;
+}
+
+li:nth-of-type(9n) {
+	--aspect-ratio:1.7;
+}
+
+
+
+/* plaatjes */
+li:nth-of-type(19n + 1 ) { background-image: url(../assets/photo14.jpeg); }
+li:nth-of-type(19n + 2 ) { background-image: url(../assets/photo17.jpeg); }
+li:nth-of-type(19n + 3 ) { background-image: url(../assets/photo1.jpeg); }
+li:nth-of-type(19n + 4 ) { background-image: url(../assets/photo2.jpeg); }
+li:nth-of-type(19n + 5 ) { background-image: url(../assets/photo3.jpeg); }
+li:nth-of-type(19n + 6 ) { background-image: url(../assets/photo19.jpeg); }
+li:nth-of-type(19n + 7 ) { background-image: url(../assets/photo5.jpeg); }
+li:nth-of-type(19n + 8 ) { background-image: url(../assets/rooftop1.jpeg); }
+li:nth-of-type(19n + 9 ) { background-image: url(../assets/photo18.jpeg); }
+li:nth-of-type(19n + 10) { background-image: url(../assets/rooftop3.jpeg); }
+li:nth-of-type(19n + 11) { background-image: url(../assets/photo14.jpeg); }
+li:nth-of-type(19n + 12) { background-image: url(../assets/photo6.jpeg); }
+li:nth-of-type(19n + 13) { background-image: url(../assets/photo7.jpeg); }
+li:nth-of-type(19n + 14) { background-image: url(../assets/photo8.jpeg); }
+li:nth-of-type(19n + 15) { background-image: url(../assets/photo9.jpeg); }
+li:nth-of-type(19n + 16) { background-image: url(../assets/photo10.jpeg); }
+li:nth-of-type(19n + 17) { background-image: url(../assets/photo11.jpeg); }
+li:nth-of-type(19n + 18) { background-image: url(../assets/photo12.jpeg); }
+li:nth-of-type(19n + 19) { background-image: url(../assets/photo13.jpeg);
+ } }
+
