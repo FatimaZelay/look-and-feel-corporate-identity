@@ -1,3 +1,28 @@
+:root {
+
+    /*Background colors*/
+
+    --primary-background-color: #ffff;
+    --secondary-background-color: #ffe40c;
+
+    /*Button colors*/
+
+    --primary-button: #f9ff1e;
+    --primary-hover-button: #000;
+
+
+     /* Accent colors */
+     --accent-color-blue: #78aaf9;
+     --accent-color-grey: #464646;
+     --accent-color-orange: #F6C343;
+
+
+      /* Text colors */
+    --primary-text-color: #000;
+    --secondary-text-color: #fffdfd;
+
+}
+
 * {
 	box-sizing:border-box;	
 }
@@ -17,7 +42,18 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 2px solid black;
+
 }
+@media (min-width: 800px) 
+    .header-xl {
+        font-size: 5rem;
+    }
+
+	@media (min-width: 800px) 
+		header-l {
+			font-size: 2.25rem;
+			line-height: 0.95em;
+		}
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -32,17 +68,17 @@ nav ul {
 		justify-content: right;
 	}
 
-
 nav  ul li{
 
 	list-style: none;
 
 }
 
+
 nav ul li a {
 
 	text-decoration: none;
-	color: black;
+	color: #000;
 	font-weight: bold;
 }
 
@@ -58,21 +94,22 @@ nav ul li a {
 
 /* styling voor de tickets button*/
 
-.tickets-button {
-	background-color: #ff0;
+.primary-button {
+	background-color: #f9ff1e;
 	padding: 10px;
-	border: 2px solid black;
+	border: 2px solid #000;
 	font-weight: bold;
 }
 
-.tickets-button a {
+.primary-button a {
 	
 	text-decoration: none;
-	color:black;
+	color:#000
+
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif, sans-serif;
+	font-family:'DIN Next LT Arabic Webfont''DIN Next LT Pro Webfont';
 	min-height: 190%;
 	margin: 0vw;
 	padding: 0vw;
@@ -80,8 +117,17 @@ body {
 	display:grid;
 	position: relative;	
 }
+@font-face {
+    font-family: 'DIN Next LT Pro Webfont';
+    src: url("fonts/DIN\ Next\ LT\ Pro\ Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'DIN Next LT Arabic Webfont';
+    src: url("fonts/din-next-lt-arabic-regular.ttf") format("truetype");
+}
 .body {
-    font-family: Arial, sans-serif;
+    font-family: 'DIN Next LT Arabic Webfont''DIN Next LT Pro Webfont';
     margin: 0;
     padding: 0;
     display: flex;
@@ -92,23 +138,15 @@ body {
 }
 
 .search-container {
-    position: relative;
-    /* display: flex;
-    justify-content: center; */
+    position: bottom;
+    display: flex;
+    align-items: center;
     background: linear-gradient(90deg, #d9d5d5, #e5e5e5);
     border-radius: 80px;
     box-shadow: 0 4px 8px rgba(0, 0, 1, 0.1);
     width: 700px;
     height: 60px;
     padding: 20px 20px;
-}
-
-footer {
-
-	display: flex;
-	justify-content: center;
-	background
-
 }
 
 #searchInput {
@@ -138,9 +176,7 @@ footer {
 /*de snap-container*/
 main {
 	position:relative;
-	
-	background-color:rgb(255, 255, 255);
-	
+	background-color:#ffff
 	overflow:auto;
 	scroll-snap-type:both mandatory;
 	overscroll-behavior:contain;
@@ -208,7 +244,7 @@ li.hier-starten {
 }
 
 li.hier-starten div {
-	background-color:rgb(255, 255, 255);
+	background-color:#ffff
 	
 	padding:.19em 1em;
 	text-align:center;
@@ -261,4 +297,3 @@ li:nth-of-type(19n + 17) { background-image: url(../assets/photo11.jpeg); }
 li:nth-of-type(19n + 18) { background-image: url(../assets/photo12.jpeg); }
 li:nth-of-type(19n + 19) { background-image: url(../assets/photo13.jpeg);
  } }
-
