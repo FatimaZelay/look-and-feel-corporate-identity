@@ -13,7 +13,7 @@ Daarna zijn wij verder gegaan met de styleguide voor de stylesheet
 ## Beschrijving
 Ik heb eerst een figma 3 ontwerpen gemaakt:
 
-<img width="742" alt="Screenshot 2024-12-02 at 14 40 07" src="https://github.com/user-attachments/assets/bf88e925-6c41-40f3-85f5-ed3cba21358f">
+<img width="595" alt="Screenshot 2024-12-02 at 15 05 20" src="https://github.com/user-attachments/assets/a460fb0f-4792-4de4-868e-288e45e230d0">
 
 
 Link: https://www.figma.com/design/4oeiUHuLc5XYdQn2NpjhqL/TICKETS-PAGE?node-id=0-1&t=ygtBWBMliX4K0TKu-1
