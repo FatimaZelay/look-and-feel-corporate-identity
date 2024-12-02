@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Tickets</title>
+    <link rel="stylesheet" href="qatarmuseums.css">
+    <link rel="assets" href="assets/logo.png">
+    <link rel="HOME" href="index.html">
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatar Museums - Book Your Tickets</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            text-decoration: none;
+        }
+        
+        /* Navbar Styles */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 2px solid black;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .logo-text {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .menu-items {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .menu-items a {
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+        }
+        .menu-items a.highlight {
+            background-color: yellow;
+            padding: 5px 10px;
+            border: 2px solid black;
+        }
+        .menu-items .icon {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: yellow;
+            border: 2px solid #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffd700;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo-container">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Qatar Museums Logo">
+            <span class="logo-text"></span>
+        </div>
+    </div>
+
+    <div class="menu-items">
+
+        <a href="index.html">HOME</a>
+        <a href="https://qm.org.qa/en/stories/">قصصنا<br>STORIES</a>
+        <a href="https://qm.org.qa/en/calendar/">الفعاليات<br>WHAT'S ON</a>
+        <a href="https://qm.org.qa/en/visit/">زيارة<br>VISIT</a>
+        <a href="#tickets" class="highlight">تذاكر<br>TICKETS</a>
+        <a href="https://qm.org.qa/en/">VENUES</a>
+        <a href="https://qm.org.qa/ar/">العربية</a>
+        <a href="https://qm.org.qa/en/">☰ MENU</a>
+    
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <h1>TCKETS</h1>
+    <div class="form-container">
+        <form action="/submit-ticket" method="POST">
+            <fieldset>
+                <legend>Select Tickets</legend>
+                <div class="radio-group">
+                    
+                    <label>
+                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
+                        National Museum of Qatar
+                    </label>
+                    <label>
+                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
+                        Museum of Islamic Art
+                    </label>
+                    <label>
+                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
+                        Arab Museum of Modern Art
+                    </label>
+                    <label>
+                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
+                        Al Zubarah
+                    </label>
+                    <label>
+                        <input type="radio" name="ticket" value="creative-hubs" required>
+                        Chaumet & Nature
+                    </label>
+                    <label>
+                        <input type="radio" name="ticket" value="creative-hubs" required>
+                        ELLSWORTH KELLY AT 100
+                    </label>
+                    <label>
+                        <input type="radio" name="ticket" value="creative-hubs" required>
+                        Air 8: A House Overlooking The World
+                    </label>
+
+                </div>
+            </fieldset>
+
+            <label for="pick-a-date">Pick a Date</label>
+            <input type="date" id="pick-a-date" name="pick-a-date" required>
+
+            <label for="entry-time">Choose Entry Time:</label>
+            <input type="time" id="entry-time" name="entry-time" required>
+
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="visitor-type">Type of Visitor *</label>
+                <select id="visitor-type" name="visitor-type" required>
+                    <option value="" disabled selected>Please make a selection</option>
+                    <option value="resident">Resident</option>
+                    <option value="tourist">Tourist</option>
+                </select>
+
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" value="Qatar">
+
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number">
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
