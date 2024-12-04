@@ -11,11 +11,12 @@ Daarna zijn wij verder gegaan met de styleguide voor de stylesheet
 
 
 ## Beschrijving
-Ik heb eerst een figma ontwerp gemaakt:
+Ik heb eerst een figma 3 ontwerpen gemaakt:
 
-<img width="805" alt="Screenshot 2024-11-28 at 12 35 24" src="https://github.com/user-attachments/assets/e8cae7c8-8f59-4fc3-9510-d417ba82f3e6">
+<img width="595" alt="Screenshot 2024-12-02 at 15 05 20" src="https://github.com/user-attachments/assets/a460fb0f-4792-4de4-868e-288e45e230d0">
 
-Je kan op elke link klikken het lijdt je naar de juiste pagina.
+
+Link: https://www.figma.com/design/4oeiUHuLc5XYdQn2NpjhqL/TICKETS-PAGE?node-id=0-1&t=ygtBWBMliX4K0TKu-1
 
 ## Kenmerken
 
