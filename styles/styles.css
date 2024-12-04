@@ -1,152 +1,100 @@
-:root {
-
-    /*Background colors*/
-
-    --primary-background-color: #ffff;
-    --secondary-background-color: #ffe40c;
-
-    /*Button colors*/
-
-    --primary-button: #f9ff1e;
-    --primary-hover-button: #000;
-
-
-     /* Accent colors */
-     --accent-color-blue: #78aaf9;
-     --accent-color-grey: #464646;
-     --accent-color-orange: #F6C343;
-
-
-      /* Text colors */
-    --primary-text-color: #000;
-    --secondary-text-color: #fffdfd;
-
-}
-
+/* Algemene */
 * {
-	box-sizing:border-box;	
-}
-
-html {
-	height:100dvh;	
-}
-
-header{
-	width: 100%;
-    position: fixed;
-    z-index: 9;
-	background-color: rgb(255, 255, 255);
-	top: 0;
-	padding: 10px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 2px solid black;
-
-}
-@media (min-width: 800px) 
-    .header-xl {
-        font-size: 5rem;
-    }
-
-	@media (min-width: 800px) 
-		header-l {
-			font-size: 2.25rem;
-			line-height: 0.95em;
-		}
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	font-size: 16px;
-
-}
-
-nav ul {
-		display: flex;
-		justify-content: right;
-	}
-
-nav  ul li{
-
-	list-style: none;
-
-}
-
-
-nav ul li a {
-
-	text-decoration: none;
-	color: #000;
-	font-weight: bold;
-}
-
-.logo {
-	display: flex;
-	align-items: center;
-}
-
-.logo img {
-	width: 40px;
-	margin-right: 10px;
-}
-
-/* styling voor de tickets button*/
-
-.primary-button {
-	background-color: #f9ff1e;
-	padding: 10px;
-	border: 2px solid #000;
-	font-weight: bold;
-}
-
-.primary-button a {
-	
-	text-decoration: none;
-	color:#000
-
+    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 body {
-	font-family:'DIN Next LT Arabic Webfont''DIN Next LT Pro Webfont';
-	min-height: 190%;
-	margin: 0vw;
-	padding: 0vw;
-	background-color:#ffffff;
-	display:grid;
-	position: relative;	
+	margin: 0;
+	font-family: DIN Next LT Pro Regular;
 }
+a {
+	text-decoration: none;
+}
+
+
+/* Header-styling */
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	background-color:#fff;
+	border-bottom: 2px solid black;
+	position:static;
+}
+.logo-container {
+	display: flex;
+	align-items: center;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.logo img {
+	height: 50px;
+}
+.logo-text {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.menu-items {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+.menu-items a {
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+}
+.menu-items a.highlight {
+	background-color: yellow;
+	padding: 5px 10px;
+	border: 2px solid black;
+}
+.menu-items .icon {
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/* Font-instellingen */
 @font-face {
     font-family: 'DIN Next LT Pro Webfont';
-    src: url("fonts/DIN\ Next\ LT\ Pro\ Regular.otf") format("opentype");
+    src: url("fonts/DIN Next LT Pro Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'DIN Next LT Arabic Webfont';
     src: url("fonts/din-next-lt-arabic-regular.ttf") format("truetype");
 }
-.body {
-    font-family: 'DIN Next LT Arabic Webfont''DIN Next LT Pro Webfont';
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #333;
-}
 
+
+/* Zoekbalk-styling */
 .search-container {
-    position: bottom;
-    display: flex;
-    align-items: center;
+    position: relative;
     background: linear-gradient(90deg, #d9d5d5, #e5e5e5);
     border-radius: 80px;
     box-shadow: 0 4px 8px rgba(0, 0, 1, 0.1);
     width: 700px;
     height: 60px;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 #searchInput {
@@ -173,119 +121,83 @@ body {
 }
 
 
-/*de snap-container*/
+/* Scroll-container */
 main {
-	position:relative;
-	background-color:#ffff
-	overflow:auto;
-	scroll-snap-type:both mandatory;
-	overscroll-behavior:contain;
-
-
-
-/*de lijst*/
-ul {	
-	margin:0;
-	padding:1em;
-	list-style:none;
-	position:absolute;
-	width:700em;
-
-	background-color:#fff;
-
-	columns:47;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    scroll-snap-type: both mandatory;
+    overscroll-behavior: contain;
 }
 
+/* Lijst van afbeeldingen */
+ul {
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    columns: 4; /* Pas dit aan voor mobiel */
+}
 
-
-/*een foto//
-//*de foto's snappen binnen de scroll-container*/
+/* Stijlen van de afbeeldingen */
 li {
-	--aspect-ratio:1;
-	
-	margin-bottom:1em;
-	aspect-ratio:var(--aspect-ratio);
-	overflow:hidden;
-	
-	//*alle li's snappen in het midden van de ul*/
-
-	scroll-snap-align:center;
-	background-size:cover;
-	background-position:center;
+    --aspect-ratio: 1;
+    margin-bottom: 1em;
+    aspect-ratio: var(--aspect-ratio);
+    overflow: hidden;
+    scroll-snap-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
-/*maar alle li's behalve de li met de class hier-starten
-// sanppen wel pas na .5s*/
-li:not(.hier-starten) {
-	/*om te beginnen snappen de li's niet*/
-	@starting-style {
-		scroll-snap-align:none;
-	}
-	
-	/* na de transitie is de starting-style niet meer van toepassing
-	transition-property:scroll-snap-align;
-	transition-delay:.5s;*/
-
-	/*om te zorgen dat scroll-snap-align kan animeren van none naar center;
-	transition-behavior: allow-discrete;*/
-	
-	//*en als @starting-style niet werkt
-	// dan start je gewoon links boven */
-}
-
-
-/*om hier-starten een beetje te highlighten*/
+/* Specifieke styling voor de .hier-starten li */
 li.hier-starten {
-	display:grid;
-	place-content:center;
-	place-items:center;
-	
-	border-radius:20em;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    border-radius: 20em;
 }
 
 li.hier-starten div {
-	background-color:#ffff
-	
-	padding:.19em 1em;
-	text-align:center;
-	font-weight:bold;
+    background-color: rgb(255, 255, 255);
+    padding: .19em 1em;
+    text-align: center;
+    font-weight: bold;
 }
 
-
-
-/* andere verhoudingen */
+/* Andere verhoudingen */
 li:nth-of-type(2n) {
-	--aspect-ratio:1.3;
+    --aspect-ratio: 1.3;
 }
 
 li:nth-of-type(3n) {
-	--aspect-ratio:1.6;
+    --aspect-ratio: 1.6;
 }
 
 li:nth-of-type(5n) {
-	--aspect-ratio:1.9;
+    --aspect-ratio: 1.9;
 }
 
 li:nth-of-type(7n) {
-	--aspect-ratio:.8;
+    --aspect-ratio: .8;
 }
 
 li:nth-of-type(9n) {
-	--aspect-ratio:1.7;
+    --aspect-ratio: 1.7;
 }
 
-
-
-/* plaatjes */
-li:nth-of-type(19n + 1 ) { background-image: url(../assets/photo14.jpeg); }
-li:nth-of-type(19n + 2 ) { background-image: url(../assets/photo17.jpeg); }
-li:nth-of-type(19n + 3 ) { background-image: url(../assets/photo1.jpeg); }
-li:nth-of-type(19n + 4 ) { background-image: url(../assets/photo2.jpeg); }
-li:nth-of-type(19n + 5 ) { background-image: url(../assets/photo3.jpeg); }
-li:nth-of-type(19n + 6 ) { background-image: url(../assets/photo19.jpeg); }
-li:nth-of-type(19n + 7 ) { background-image: url(../assets/photo5.jpeg); }
-li:nth-of-type(19n + 8 ) { background-image: url(../assets/rooftop1.jpeg); }
-li:nth-of-type(19n + 9 ) { background-image: url(../assets/photo18.jpeg); }
+/* Achtergrondafbeeldingen */
+li:nth-of-type(19n + 1) { background-image: url(../assets/photo14.jpeg); }
+li:nth-of-type(19n + 2) { background-image: url(../assets/photo17.jpeg); }
+li:nth-of-type(19n + 3) { background-image: url(../assets/photo1.jpeg); }
+li:nth-of-type(19n + 4) { background-image: url(../assets/photo2.jpeg); }
+li:nth-of-type(19n + 5) { background-image: url(../assets/photo3.jpeg); }
+li:nth-of-type(19n + 6) { background-image: url(../assets/photo19.jpeg); }
+li:nth-of-type(19n + 7) { background-image: url(../assets/photo5.jpeg); }
+li:nth-of-type(19n + 8) { background-image: url(../assets/rooftop1.jpeg); }
+li:nth-of-type(19n + 9) { background-image: url(../assets/photo18.jpeg); }
 li:nth-of-type(19n + 10) { background-image: url(../assets/rooftop3.jpeg); }
 li:nth-of-type(19n + 11) { background-image: url(../assets/photo14.jpeg); }
 li:nth-of-type(19n + 12) { background-image: url(../assets/photo6.jpeg); }
@@ -295,5 +207,13 @@ li:nth-of-type(19n + 15) { background-image: url(../assets/photo9.jpeg); }
 li:nth-of-type(19n + 16) { background-image: url(../assets/photo10.jpeg); }
 li:nth-of-type(19n + 17) { background-image: url(../assets/photo11.jpeg); }
 li:nth-of-type(19n + 18) { background-image: url(../assets/photo12.jpeg); }
-li:nth-of-type(19n + 19) { background-image: url(../assets/photo13.jpeg);
- } }
+li:nth-of-type(19n + 19) { background-image: url(../assets/photo13.jpeg); }
+
+
+
+a:focus, button:focus {
+	outline: 2px solid #f679a1!important; /* Overschrijven met !important indien nodig */
+	outline-offset: 2px;
+	border-radius: 4px;
+  }
+  
