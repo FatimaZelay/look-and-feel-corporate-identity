@@ -159,36 +159,45 @@ a:focus, button:focus {
             <fieldset>
                 <legend>Select Tickets</legend>
                 <div class="radio-group">
+                    <div role="group" aria-labelledby="ticket-group-label">
+                        <p id="ticket-group-label">Choose a ticket type:</p>
                     
-                    <label>
-                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
-                        National Museum of Qatar
-                    </label>
-                    <label>
-                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
-                        Museum of Islamic Art
-                    </label>
-                    <label>
-                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
-                        Arab Museum of Modern Art
-                    </label>
-                    <label>
-                        <input type="radio" name="ticket" value="museums-and-outdoor-spaces">
-                        Al Zubarah
-                    </label>
-                    <label>
-                        <input type="radio" name="ticket" value="creative-hubs" required>
-                        Chaumet & Nature
-                    </label>
-                    <label>
-                        <input type="radio" name="ticket" value="creative-hubs" required>
-                        ELLSWORTH KELLY AT 100
-                    </label>
-                    <label>
-                        <input type="radio" name="ticket" value="creative-hubs" required>
-                        Air 8: A House Overlooking The World
-                    </label>
-
+                        <label for="ticket-nmoq">
+                            <input type="radio" id="ticket-nmoq" name="ticket" value="museums-and-outdoor-spaces">
+                            National Museum of Qatar
+                        </label>
+                    
+                        <label for="ticket-mia">
+                            <input type="radio" id="ticket-mia" name="ticket" value="museums-and-outdoor-spaces">
+                            Museum of Islamic Art
+                        </label>
+                    
+                        <label for="ticket-amoma">
+                            <input type="radio" id="ticket-amoma" name="ticket" value="museums-and-outdoor-spaces">
+                            Arab Museum of Modern Art
+                        </label>
+                    
+                        <label for="ticket-alzubarah">
+                            <input type="radio" id="ticket-alzubarah" name="ticket" value="museums-and-outdoor-spaces">
+                            Al Zubarah
+                        </label>
+                    
+                        <label for="ticket-chaumet">
+                            <input type="radio" id="ticket-chaumet" name="ticket" value="creative-hubs" required>
+                            Chaumet & Nature
+                        </label>
+                    
+                        <label for="ticket-ellsworth">
+                            <input type="radio" id="ticket-ellsworth" name="ticket" value="creative-hubs" required>
+                            ELLSWORTH KELLY AT 100
+                        </label>
+                    
+                        <label for="ticket-air8">
+                            <input type="radio" id="ticket-air8" name="ticket" value="creative-hubs" required>
+                            Air 8: A House Overlooking The World
+                        </label>
+                    </div>
+                    
                 </div>
             </fieldset>
 
@@ -225,7 +234,7 @@ a:focus, button:focus {
                 <input type="tel" id="phone-number" name="phone-number">
             </fieldset>
 
-            <button aria-label="submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </main>
